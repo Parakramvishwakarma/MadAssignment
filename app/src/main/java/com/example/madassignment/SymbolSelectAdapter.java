@@ -75,6 +75,7 @@ public class SymbolSelectAdapter extends RecyclerView.Adapter<SelectUserVH> {
                 else {
                     holder.checkboxButton.setVisibility(View.VISIBLE);
                     holder.userNameText.setText("Player 1");
+                    holder.checkboxButton.setImageResource(R.drawable.number_one_icon);
                     holder.userNameText.setVisibility(View.VISIBLE);
                 }
             }
@@ -102,6 +103,7 @@ public class SymbolSelectAdapter extends RecyclerView.Adapter<SelectUserVH> {
 
     public void processClick(SelectUserVH holder, int singleRow) {
             if(userModel.getUserSymbol1() == 0 && userModel.getUserSymbol2() == 0) {
+                System.out.println("Setting symbol `1 to : " + singleRow);
                 userModel.setUserSymbol1(singleRow);
             }
             else if(userModel.getUserSymbol1() != 0 && userModel.getUserSymbol2() == 0) {
