@@ -58,7 +58,6 @@ public class UsersFragment extends Fragment {
                 GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(gridLayoutManager);
         data = getUsers();
-        System.out.println("The size is" + data.size());
         //set adapter
         EditDeleteUserAdapter editDeleteUserAdapter =new EditDeleteUserAdapter(data, navModel, editUserModel, userDataModel);
         recyclerView.setAdapter(editDeleteUserAdapter);

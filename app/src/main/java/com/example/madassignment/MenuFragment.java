@@ -203,7 +203,6 @@ public class MenuFragment extends Fragment {
                 navModel.setClickedValue(5);
                 //set gamemode for PvP mode
                 gameData.setGameMode(2);
-                System.out.println("The value of the game mose has been set ot " + gameData.getGameMode());
 
             }
         });
@@ -317,13 +316,11 @@ public class MenuFragment extends Fragment {
         winCondition = gameData.getWinCondition();
         //This means the left button is clicked
         if(direction == -1) {
-            System.out.println("The left button is clicked");
             winCondition += direction;
             gameData.setWinCondition(winCondition);
         }
         //this means the right button is clicked
         else {
-            System.out.println("The right button is clicked");
             if(winCondition < gameData.getBoardSize()){
                 winCondition += direction;
                 gameData.setWinCondition(winCondition);
@@ -386,10 +383,8 @@ public class MenuFragment extends Fragment {
     public void handleBoardSizeClick(int direction){
         boardSize = gameData.getBoardSize();
         if(direction == -1) {
-            System.out.println("The left button is clicked");
         }
         else {
-            System.out.println("The right button is clicked");
         }
 
         boardSize += direction;
